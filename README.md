@@ -43,7 +43,7 @@ schtasks /delete /tn "SincronizarHora" /f
 
 ## ⚠️ Observações
 - O script **precisa ser executado como Administrador** para funcionar corretamente.
-- A sincronização usa o servidor `time.windows.com`.
+- A sincronização usa o servidor `a.st1.ntp.br`.
 - Compatível com **Windows 10 e 11**.
 
 ## 📜 Licença
