@@ -1,4 +1,12 @@
 @echo off
+REM Verifica se o script está sendo executado como administrador
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [*] Elevando para privilégios de administrador...
+    powershell -Command "Start-Process '%~0' -Verb runAs"
+    exit /b
+)
+
 echo ==========================================
 echo Criando a pasta C:\Scripts...
 echo ==========================================
